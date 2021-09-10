@@ -33,6 +33,10 @@ const portfolioSchema = new mongoose.Schema({
     minlength: 3,
     maxlength: 64
   },
+  trader: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Trader'
+  },
   assetHoldings: [assetHoldingSchema],
   orderGroups: [orderGroupSchema],
   myFollowersLog: [{

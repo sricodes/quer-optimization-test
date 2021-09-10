@@ -4,9 +4,7 @@ const mongoose = require('mongoose');
 
 const connect = async () => {
   try {
-    const mongoUrlKey = `MONGO_URL${process.env.NODE_ENV ? '_' + process.env.NODE_ENV.toUpperCase() : ''}`;
-    const dbNameKey = `DBNAME${process.env.NODE_ENV ? '_' + process.env.NODE_ENV.toUpperCase() : ''}`;
-    const mongoURL = `${process.env[mongoUrlKey]}/${process.env[dbNameKey]}`;
+    const mongoURL = `${process.env.MONGO_URL}`;
     await mongoose.connect(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
       console.log(`connected to ${mongoURL}`);
     });
