@@ -1,4 +1,3 @@
-const moment = require('moment');
 const mongoose = require('mongoose');
 
 const { getAUM, getPortfolioIndexValue, getMinimumFollowAmount} = require('../modelHelpers/portfolioHelper');
@@ -6,7 +5,6 @@ const { getAUM, getPortfolioIndexValue, getMinimumFollowAmount} = require('../mo
 const { PortfolioFollowing } = require('../models/portfolioFollowing');
 
 const formatPortfolioResponse = async (portfolio, trader) => {
-  const newDate = moment().toDate();
 
   if (mongoose.Types.ObjectId.isValid(portfolio.portfolioProgress)) await portfolio.populate('portfolioProgress');
   if (mongoose.Types.ObjectId.isValid(portfolio.trader)) await portfolio.populate('trader');

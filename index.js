@@ -41,8 +41,12 @@ app.get('/welcome', [auth], async (req, res) => {
   const bestEquity = await getPortfolios('bestEquity');
   const bestEquityCount = await countPortfolios('bestEquity');
   const trader = {req};
+  const formattedBestEquity = [];
+  for (i = 0; i < bestEquity.sortedPortfolios.length; i++) {
+    formattedBestEquity.push(await formatPortfolioResponse(bestEquity.sortedPortfolios[i], trader));
+  }
   const response = {
-    bestEquity: await Promise.all(bestEquity.sortedPortfolios.map((pfId) => formatPortfolioResponse(pfId, trader))),
+    bestEquity: formattedBestEquity,
     bestEquityCount
   };
   // console.timeEnd('bestportfolios');
