@@ -1,5 +1,4 @@
 {
-  "redisPort": 6379,
   "bestPortfoliosCount": 30,
   "jwtPrivateKey": "abcdefgh",
   "userTokenExpiresIn": 15552000

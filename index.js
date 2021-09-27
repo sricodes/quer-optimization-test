@@ -1,16 +1,8 @@
 const express = require('express');
-const { createBullBoard } = require('bull-board');
-const { BullAdapter } = require('bull-board/bullAdapter');
 require('dotenv').config();
 
-const { bestReturnsProducer } = require('./tasks/best-returns/producer');
-const { portfolioProgressesProducer } = require('./tasks/portfolio-progress/producer');
 const auth = require('./middleware/auth');
 const { formatPortfolioResponse } = require('./utils/portfolioResponse');
-const {
-  bestReturnsSchedule, 
-  portfolioProgressSchedule
-} = require('./queues/index');
 const { Trader } = require('./models/trader');
 const { connect } = require('./utils/dbConnect');
 const { SortedPortfolioArray } = require('./models/sortedPortfolioArray');
@@ -52,19 +44,6 @@ app.get('/welcome', [auth], async (req, res) => {
   // console.timeEnd('bestportfolios');
   return res.send(response);
 });
-
-bestReturnsProducer();
-portfolioProgressesProducer();
-
-const { router } = createBullBoard([
-  // new BullAdapter(misOrdersSchedule),
-  new BullAdapter(bestReturnsSchedule),
-  // new BullAdapter(portfolioMetricsSchedule),
-  // new BullAdapter(portfolioOfTheWeekSchedule),
-  new BullAdapter(portfolioProgressSchedule)
-]);
-
-app.use('/admin/queues', router);
 
 app.listen(port, () => {
   return console.log(`server is listening on ${port}`);
