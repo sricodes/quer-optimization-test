@@ -16,6 +16,10 @@ const portfolioFollowingSchema = new mongoose.Schema({
     default: Date.now,
     required: true
   },
+  follower: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Trader',
+  },
   followEndDate: Date
 });
 
