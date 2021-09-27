@@ -1,19 +1,6 @@
 {
   "redisPort": 6379,
   "bestPortfoliosCount": 30,
-  "firebaseAdminConfig": {
-    "type": "service_account",
-    "project_id": "tinker-app-83aa3",
-    "private_key_id": "818f7a9d8789482b600a535048b9172a60a14c32",
-    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCHbpMbaQ63BJXG\ngSuCKGxT7DXpWrPl3qq4iv8+ITQSUyx+olk7G1eI5nf1ZCUXKU/4QEm6bvF9VH0H\ndZem05Y2UousRE2/bQCJqbOa21VWzen5Xn2FIhViuujCS+z61nRdgXuZb0O0oTJY\nl17MppAJi1rPdIVzfxMfy5xkMUFXHdszc42IALFqEePA48Y2wMLmxIm13Gy+jjMB\nErYyJScIhr2JY8EzqUdEuiwJxkRBxAFeGHm68qNbqzY5Yfomu6Mds8JWgQmsUbs3\n9Szzq/7ywdz8x0WLxTiXdZJHlS/S4tnEucbpRgC4VTNkw3uGXB4jeNEDJ2mQljpw\nDjbyroZpAgMBAAECggEADy7dFKNaSDfeH7c+/LRR8rWmVJ870F8+dfp1Q46e4xgK\ngrbqOIdn8Jvf4nWj990Ej2ELsvg5oBKfAr1S71vEuRnXeUxeCAItH4HUNh31SwpC\nOxf2C/0mdx9btV6kNnng6VO5Gto/taoltgtgUCKzPrKuD1hxlqFuMDAYPB5OhDjV\np0/0Wb8GTwPq8Zxpc73J+j8A/RWjIY/aWVD+F7WN/VJD+MGPKs9refIneyHGqQmi\n284YNVhoSomEoRmde3WuFJVqLYZlTCkwZv/uwjcC2U+inicN57/fAvwdAivkiLsZ\nNcIS1LtZeupXBEN1OwgItAxvG1IoEDhK6vyOjReO4QKBgQC9DyBUxEd+qfHn+Z0Q\nGDTqvsWs9Zl2pHf1ktPRgsdTNmVahD++FbjhE7jPOwCipNleK1zWF0+dPYnUk/kt\njFRzC3N21VMySj8BWre8zAtgQmeKtvJuKbneV3SVJCTO4FLz8L/TXSI7+plshkyw\nlD/BpFQ1aAqw6gCGcbe6Xuh9WQKBgQC3YoZUqHaRX7cbi6XCxUvbOKAAu2WG2Z6F\nyyj0QLewcS3/modg1yKW1j5ZVu3qwT0dSjx2P+dLP4IFdMt/bpvIJtN63fRh/IhR\nn/lxFyVgya8oY+UX9C784DmS9AnfSuJocSAuANcHOJQi+Qhd7CbyBbpXD5d+mRIa\n6O+5hWffkQKBgQC4ZbWCGAMnnrgsKwEvPnz2bOW/AbkRx+6c3f2tPmINXmPSumS1\nkNhG54Z80S6YdDLyr1aYFhp34hq59S23aETCBOw0fnLr/RCg0IufIGEEHSCCYlfo\nbNg17ZTvFla0VIV0Gl/u1sraN11HRWItZBsfUpkzkevDjCjA+M9bftBB2QKBgQCU\nh9dXUE8gdc7gH551f8lt2JI3pZCYxUARC7izBIwC+9iO00FdHUKluwcq4y62Wic+\nxvbrq9yRZPHRq4R7RUIlvdTCCm26w4hB3HlzsJSUrSYSZ76RRTSdmprnPIOWeJei\nkiXHPOTss1XAccXmFLSCiEMh6r4ASsiQRSSNNdEpEQKBgHF6t1FsvePcCDXV3+zq\ngyDDQtJzLQPS0sY8zJLkHJTgF/bX1fz4s/93QuYX8OkoNBHE30vX15Yxakhu1Xu3\nspcZR/+83Cp4BRiIcO14KaHphQM+eiUmCresIlqL7yCJUTnew5M0akY0qDQgmPx8\nnxnYs2P7R//qFkHu7Jj7cKcj\n-----END PRIVATE KEY-----\n",
-    "client_email": "firebase-adminsdk-rv6ko@tinker-app-83aa3.iam.gserviceaccount.com",
-    "client_id": "113008615803664138924",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-rv6ko%40tinker-app-83aa3.iam.gserviceaccount.com"
-  },
-  "realtimeDatabase": "https://tinker-app-83aa3-default-rtdb.asia-southeast1.firebasedatabase.app",
   "jwtPrivateKey": "abcdefgh",
   "userTokenExpiresIn": 15552000
 }
