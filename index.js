@@ -6,6 +6,7 @@ const { formatPortfolioResponse } = require('./utils/portfolioResponse');
 const { Trader } = require('./models/trader');
 const { connect } = require('./utils/dbConnect');
 const { SortedPortfolioArray } = require('./models/sortedPortfolioArray');
+const { PortfolioProgress } = require('./models/portfolioProgress');
 connect();
 
 const app = express();
