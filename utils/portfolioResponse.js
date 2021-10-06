@@ -17,15 +17,15 @@ const formatPortfolioResponse = async (portfolio, trader) => {
     });
   }
 
-  const indexValue = portfolio.portfolioProgress ? portfolio.portfolioProgress.indexValue : await getPortfolioIndexValue(portfolio);
+  const indexValue = portfolio.portfolioProgress?.indexValue;
   const returns = (indexValue - 100) / 100;
   const followersCount = portfolio.portfolioProgress ? portfolio.portfolioProgress.followersCount : portfolio.myFollowersLog.length;
 
-  const AUM = portfolio.portfolioProgress ? portfolio.portfolioProgress.AUM : await getAUM(portfolio);
+  const AUM = portfolio.portfolioProgress?.AUM;
   const followerReturns = 0;
   const createdAt = portfolio.orderGroups[0]?.placingDate ? portfolio.orderGroups[0].placingDate : portfolio.createdAt;
 
-  const minFollowAmount = Math.ceil((portfolio.portfolioProgress ? portfolio.portfolioProgress.minFollowAmount : await portfolio.getMinimumFollowAmount()));
+  const minFollowAmount = Math.ceil((portfolio.portfolioProgress?.minFollowAmount));
 
   const isFollowedRecord = await PortfolioFollowing.findOne({
     follower: trader._id,
